@@ -3,251 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STC Strategic Briefing: Blue Tech & Physical AI 2026</title>
+    <title>CityU Strategic Briefing: Blue Tech & Physical AI</title>
     <style>
         :root {
-            --primary: #002D62; /* Seattle Maritime Blue */
-            --accent: #0077BE;  /* Ocean Blue */
-            --highlight: #00A3A1; /* Sea Foam Green */
-            --bg: #F0F4F8;
-            --text: #1A202C;
+            --cityu-red: #C8102E; /* CityU Branding */
+            --maritime-blue: #002D62;
+            --ocean-cyan: #009CDE;
+            --bg: #F4F7F9;
             --white: #FFFFFF;
         }
-
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: var(--white);
-            padding: 60px 20px;
-            text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        }
-
-        .hero h1 { font-size: 2.8rem; margin: 0; letter-spacing: -1px; }
-        .hero p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; }
-
-        .container {
-            max-width: 1100px;
-            margin: -50px auto 60px;
-            padding: 0 20px;
-        }
-
-        /* Executive Summary Box */
-        .exec-box {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
-        }
-
-        .exec-box h2 { color: var(--primary); margin-top: 0; border-bottom: 3px solid var(--highlight); display: inline-block; }
-
-        /* The Three Pillars Grid */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-            margin-bottom: 50px;
-        }
-
-        .card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 12px;
-            border-top: 5px solid var(--accent);
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
-        .card h3 { color: var(--primary); margin-top: 0; }
-        .card .badge { 
-            background: #EBF8FF; color: var(--accent); 
-            font-size: 0.75rem; font-weight: bold; 
-            padding: 5px 12px; border-radius: 20px; text-transform: uppercase;
-        }
-
-        /* Actions Section */
-        .actions-section {
-            background: var(--primary);
-            color: var(--white);
-            padding: 50px;
-            border-radius: 15px;
-            margin-bottom: 50px;
-        }
-
-        .actions-section h2 { color: var(--highlight); }
-        .action-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-            background: rgba(255,255,255,0.05);
-            padding: 15px;
-            border-radius: 8px;
-        }
-        .action-number {
-            background: var(--highlight);
-            color: var(--primary);
-            font-weight: bold;
-            min-width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-        }
-
-        /* Footer Links */
-        .resources {
-            text-align: center;
-            padding: 40px;
-            border-top: 1px solid #CBD5E0;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: var(--accent);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin: 5px;
-        }
-
-        .btn:hover { background: var(--primary); }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .container { margin-top: -20px; }
-        }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: var(--bg); color: #333; margin: 0; line-height: 1.6; }
+        .hero { background: linear-gradient(135deg, var(--maritime-blue), var(--cityu-red)); color: white; padding: 50px 20px; text-align: center; }
+        .container { max-width: 1100px; margin: -30px auto 50px; padding: 0 20px; }
+        .card { background: var(--white); border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); padding: 30px; margin-bottom: 30px; border-top: 6px solid var(--cityu-red); }
+        .highlight-box { background: #eef6fb; border-left: 5px solid var(--ocean-cyan); padding: 20px; margin: 20px 0; border-radius: 4px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .pillar-card { background: white; padding: 20px; border-radius: 8px; border: 1px solid #ddd; position: relative; }
+        .pillar-card h3 { color: var(--maritime-blue); margin-top: 0; }
+        .tag { background: var(--ocean-cyan); color: white; font-size: 0.7rem; padding: 3px 10px; border-radius: 10px; position: absolute; top: 20px; right: 20px; }
+        .action-list { background: var(--maritime-blue); color: white; padding: 40px; border-radius: 12px; }
+        .action-list h2 { color: var(--ocean-cyan); }
+        .resource-link { display: inline-block; margin-top: 10px; color: var(--ocean-cyan); font-weight: bold; text-decoration: none; }
+        .resource-link:hover { text-decoration: underline; }
+        li { margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
 <div class="hero">
-    <h1>Blue Tech & Physical AI Briefing</h1>
-    <p>Strategic Integration Plan for the School of Technology and Computing (STC)</p>
+    <h1>Blue Tech & Physical AI Strategy 2026</h1>
+    <p>Strategic Partnership: City University of Seattle & Washington Maritime Blue</p>
 </div>
 
 <div class="container">
     
-    <div class="exec-box">
-        <h2>The Opportunity</h2>
-        <p>As of 2026, Seattle has transitioned from a "Software City" to a global leader in <strong>Physical AI</strong>. For STC, this represents a shift in the labor market: the industry no longer needs just "coders," it needs <strong>AI Systems Architects</strong> who can deploy intelligence into the maritime environment (Blue Tech).</p>
-        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 250px; border-left: 4px solid var(--highlight); padding-left: 15px;">
-                <strong>Physical AI:</strong> AI that interacts with the real world (Robotics, Sensors, Edge Computing).
-            </div>
-            <div style="flex: 1; min-width: 250px; border-left: 4px solid var(--accent); padding-left: 15px;">
-                <strong>Blue Tech:</strong> The $30B+ sustainable maritime economy powered by advanced technology.
-            </div>
+    <div class="card">
+        <h2>The Proposal: Academic Membership</h2>
+        <p>By joining <strong>Washington Maritime Blue</strong> as a non-profit academic member, CityU STC secures a leadership position in the Pacific Northwest's emerging "Blue Economy."</p>
+        <div class="highlight-box">
+            <strong>Why this matters:</strong> The Maritime Innovation Center (MInC) is a partnership between Maritime Blue and the Port of Seattle. Membership provides CityU direct access to this $30B cluster, connecting our students to over 150 industry leaders including Microsoft, Amazon, and global shipping titans.
         </div>
     </div>
 
     <div class="grid">
-        <div class="card">
-            <div>
-                <span class="badge">Opening Summer 2026</span>
-                <h3>Maritime Innovation Center (MInC)</h3>
-                <p>Located at Fishermen's Terminal, this is a <strong>Living Building</strong> serving as the region's physical anchor for hardware startups.</p>
-                <ul>
-                    <li>15,000 sq ft Fabrication Lab</li>
-                    <li>Prototyping for robotic submersibles</li>
-                    <li>Direct waterfront "Living Lab" access</li>
-                </ul>
-            </div>
-            <a href="https://maritimeblue.org/maritime-innovation-center/" class="btn">Project Specs</a>
+        <div class="pillar-card">
+            <span class="tag">The Hub</span>
+            <h3>Maritime Innovation Center</h3>
+            <p>The 15,000 sq ft physical site at Fishermen's Terminal. A "Living Building" for hardware prototyping and Physical AI testing.</p>
+            <a href="https://maritimeblue.org/maritime-innovation-center/" class="resource-link">View Facility Specs →</a>
         </div>
-
-        <div class="card">
-            <div>
-                <span class="badge">Strategic Alliance</span>
-                <h3>Washington Maritime Blue</h3>
-                <p>The "Connective Tissue" linking Microsoft, Amazon, and the Port of Seattle to STC graduates.</p>
-                <ul>
-                    <li>Joint Innovation Projects (JIPs)</li>
-                    <li>Venture Accelerators</li>
-                    <li>Focus: Decarbonization & 5G Ports</li>
-                </ul>
-            </div>
-            <a href="https://maritimeblue.org/" class="btn">Industry Network</a>
+        <div class="pillar-card">
+            <span class="tag">The Alliance</span>
+            <h3>Washington Maritime Blue</h3>
+            <p>The strategic cluster managing the "Blue Venture Accelerator" and Joint Innovation Projects (JIPs) in decarbonization and 5G ports.</p>
+            <a href="https://maritimeblue.org/wp-content/uploads/2025/09/2024-25-Annual-Report.pdf" class="resource-link">2025 Annual Report →</a>
         </div>
-
-        <div class="card">
-            <div>
-                <span class="badge">21+ Startups Active</span>
-                <h3>AI House Seattle</h3>
-                <p>Based at Pier 70, this is the "AI Town Hall" where 1,000+ experts and 21+ startups collaborate on applied AI.</p>
-                <ul>
-                    <li>Applied AI for Healthcare & Maritime</li>
-                    <li>Massive data-pipeline infrastructure</li>
-                    <li>Nexus for founders and investors</li>
-                </ul>
-            </div>
-            <a href="https://www.ai2incubator.com/ai-house" class="btn">View Hub</a>
+        <div class="pillar-card">
+            <span class="tag">The Software</span>
+            <h3>AI House Seattle</h3>
+            <p>The waterfront nexus where 20+ startups solve maritime data problems. A primary site for software engineering internships.</p>
+            <a href="https://www.ai2incubator.com/ai-house" class="resource-link">Founder Network →</a>
         </div>
     </div>
 
-    <div class="actions-section">
+    <div class="card" style="margin-top: 30px;">
+        <h2>Why CityU Should Join (Membership Benefits)</h2>
+        <ul>
+            <li><strong>Joint Innovation Projects (JIPs):</strong> Faculty and students can participate in high-stakes R&D for maritime 5G, autonomous navigation, and "Quiet Sound" AI initiatives.</li>
+            <li><strong>Industry-Aligned Curriculum:</strong> Direct input from the Maritime Blue cluster to ensure STC's AI and Cybersecurity programs meet 2026 industry standards.</li>
+            <li><strong>Workforce Development Grants:</strong> Access to state and federal funding specifically earmarked for "Blue Economy" career training.</li>
+            <li><strong>Direct Career Pipeline:</strong> Priority access to the "Blue Venture Accelerator" startups for student placement and capstone projects.</li>
+        </ul>
+        <a href="https://maritimeblue.org/wp-content/uploads/2025/09/Maritime-Blue-Standard-Membership-2025-26.pdf" class="resource-link">View Membership Tiers (Non-Profit Rates Apply) →</a>
+    </div>
+
+    <div class="action-list">
         <h2>7 Strategic Actions for STC</h2>
-        
-        <div class="action-item">
-            <div class="action-number">1</div>
-            <div><strong>Curriculum Pivot:</strong> Integrate "Edge AI" and "Sensor Fusion" into the AI core to meet Physical AI demands.</div>
-        </div>
-
-        <div class="action-item">
-            <div class="action-number">2</div>
-            <div><strong>Research Grants:</strong> Partner with Maritime Blue on the 2026 WA Dept of Commerce Blue Economy calls.</div>
-        </div>
-
-        <div class="action-item">
-            <div class="action-number">3</div>
-            <div><strong>"First-Look" Pipelines:</strong> Formalize internship agreements with the 21 startups at AI House.</div>
-        </div>
-
-        <div class="action-item">
-            <div class="action-number">4</div>
-            <div><strong>Satellite Labs:</strong> Use the MInC Fabrication Labs as a second site for STC hardware research.</div>
-        </div>
-
-        <div class="action-item">
-            <div class="action-number">5</div>
-            <div><strong>Capstones:</strong> Align Senior Capstones with real maritime problems (e.g., Orca protection via AI acoustics).</div>
-        </div>
-
-        <div class="action-item">
-            <div class="action-number">6</div>
-            <div><strong>Workforce Literacy:</strong> Launch an "AI for Maritime" certificate for traditional industry professionals.</div>
-        </div>
-
-        <div class="action-item">
-            <div class="action-number">7</div>
-            <div><strong>Regional Leadership:</strong> Brand STC as the "Maritime-to-Cloud" authority of the Pacific Northwest.</div>
-        </div>
+        <ol>
+            <li><strong>Formalize Membership:</strong> Secure non-profit academic status within the Maritime Blue cluster.</li>
+            <li><strong>Physical AI Integration:</strong> Update AI curriculum to include "Edge Computing" for maritime sensors.</li>
+            <li><strong>"Living Lab" Access:</strong> Schedule a site visit to the MInC for STC faculty to identify lab-sharing opportunities.</li>
+            <li><strong>JIP Participation:</strong> Volunteer STC as the "AI Research Lead" for upcoming 2026 Joint Innovation Projects.</li>
+            <li><strong>Founder Mentorship:</strong> Connect STC students with CEOs from the Blue Venture Accelerator for 1-on-1 coaching.</li>
+            <li><strong>Cyber-Maritime Focus:</strong> Develop a niche specialization in securing maritime autonomous systems (a massive industry gap).</li>
+            <li><strong>Regional Branding:</strong> Market CityU as the premier "Maritime-to-Cloud" university in the PNW.</li>
+        </ol>
     </div>
 
-    <div class="resources">
-        <h3>Primary Resources</h3>
-        <a href="https://www.portseattle.org/projects/maritime-innovation-center-0" class="btn">Port of Seattle MInC</a>
-        <a href="https://maritimeblue.org/joint-innovation/" class="btn">Maritime Blue JIPs</a>
-        <a href="https://harrell.seattle.gov/2025/03/27/mayor-bruce-harrell-and-city-of-seattle-launch-groundbreaking-ai-incubator/" class="btn">Seattle AI House News</a>
-        <p style="margin-top: 20px; font-size: 0.8rem; color: #718096;">Briefing prepared for STC Leadership • January 15, 2026</p>
-    </div>
+</div>
 
+<div style="text-align: center; color: #7f8c8d; padding-bottom: 40px;">
+    Briefing for the Dean of Technology and Computing • January 2026
 </div>
 
 </body>
