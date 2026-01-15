@@ -3,122 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research | Portfolio</title>
+    <title>The Briefing Room | Intel & Research</title>
     <style>
         :root {
-            --primary: #2563eb;
-            --dark: #1e293b;
-            --light: #f8fafc;
-            --text: #334155;
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8; /* Tech Blue */
+            --text-main: #f1f5f9;
+            --text-dim: #94a3b8;
+            --border: #334155;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background-color: var(--light);
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
             margin: 0;
-            padding: 0;
+            line-height: 1.6;
         }
 
+        /* Futuristic Header */
         header {
-            background-color: white;
-            border-bottom: 1px solid #e2e8f0;
-            padding: 2rem 1rem;
+            padding: 4rem 1rem 2rem;
             text-align: center;
+            border-bottom: 1px solid var(--border);
+            background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
+        }
+
+        .status-bar {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            letter-spacing: -1px;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            color: var(--text-dim);
+            max-width: 600px;
+            margin: 1rem auto;
         }
 
         .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
         }
 
-        .research-card {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
+        /* Intelligence Cards */
+        .intel-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
         }
 
-        .research-card:hover {
-            transform: translateY(-2px);
+        .intel-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.2);
         }
 
-        .research-card h2 {
-            margin-top: 0;
-            color: var(--dark);
+        .intel-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent);
+            opacity: 0.5;
         }
 
-        .tag {
-            display: inline-block;
-            background: #dbeafe;
-            color: var(--primary);
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 600;
+        .category {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.75rem;
+            color: var(--accent);
+            font-weight: bold;
+            display: block;
             margin-bottom: 0.5rem;
         }
 
-        .link-button {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.5rem 1rem;
-            background-color: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 500;
+        h2 {
+            margin: 0.5rem 0;
+            font-size: 1.25rem;
         }
 
-        .link-button:hover {
-            background-color: #1d4ed8;
+        p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.6rem 1.2rem;
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background: var(--accent);
+            color: var(--bg-dark);
         }
 
         footer {
             text-align: center;
-            padding: 2rem;
-            color: #64748b;
-            font-size: 0.9rem;
+            padding: 4rem 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.8rem;
+            color: var(--text-dim);
+        }
+
+        .glitch-effect {
+            text-shadow: 2px 0 var(--accent);
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Research & Publications</h1>
-        <p>Exploring the intersection of technology, strategy, and education.</p>
+        <div class="status-bar">// System Online // Signal Stable //</div>
+        <h1 class="glitch-effect">THE BRIEFING ROOM</h1>
+        <p class="subtitle">High-fidelity analysis on emerging tech, strategic frameworks, and computational intelligence.</p>
     </header>
 
-    <div class="container">
+    <main class="container">
         
-        <div class="research-card">
-            <span class="tag">Featured Briefing</span>
-            <h2>Blue Tech Strategic Briefing</h2>
-            <p>An in-depth analysis of emerging "Blue Ocean" technologies and their impact on modern industry frameworks.</p>
-            <a href="blue-tech-briefing.html" class="link-button">View Briefing &rarr;</a>
-        </div>
+        <section class="intel-card">
+            <span class="category">FILE: STRATEGIC_INTEL</span>
+            <h2>Blue Tech Briefing</h2>
+            <p>A deep dive into Blue Ocean strategies within the technical sector. Competitive analysis and market evolution pathways.</p>
+            <a href="blue-tech-briefing.html" class="btn">ACCESS REPORT</a>
+        </section>
 
-        <div class="research-card">
-            <span class="tag">Manuscript</span>
-            <h2>Current Research Project</h2>
-            <p>Abstract for your current research goes here. Describe the methodology, the problem statement, and the expected outcomes of your study.</p>
-        </div>
+        <section class="intel-card">
+            <span class="category">FILE: AI_MANUSCRIPT</span>
+            <h2>Designing Agency</h2>
+            <p>Exploring the framework for AI-powered coding assistants in higher education environments. Current manuscript status: Draft.</p>
+            <a href="#" class="btn">VIEW ABSTRACT</a>
+        </section>
 
-        <div class="research-card">
-            <span class="tag">Case Study</span>
-            <h2>Supply Chain Optimization</h2>
-            <p>A look into data-driven decision making within startup ecosystems and resource allocation.</p>
-        </div>
+        <section class="intel-card">
+            <span class="category">FILE: SMART_MFG</span>
+            <h2>Multi-Agent Systems</h2>
+            <p>Research on smart manufacturing and the integration of multi-agent systems in modern supply chain logistics.</p>
+            <a href="#" class="btn">DATA LOGS</a>
+        </section>
 
-    </div>
+    </main>
 
     <footer>
-        <p>&copy; 2026 | Research Portfolio</p>
-        <p><a href="index.html" style="color: var(--primary);">Back to Dashboard</a></p>
+        <p>SECURE TERMINAL ACCESS | EST. 2026</p>
+        <p><a href="index.html" style="color: var(--accent); text-decoration: none;">Return to Dashboard</a></p>
     </footer>
 
 </body>
