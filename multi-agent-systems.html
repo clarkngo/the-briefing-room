@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Agent Systems | Technical Log</title>
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --accent-green: #10b981; /* Manufacturing/System Green */
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-dim: #94a3b8;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .nav-back { padding: 1.5rem; max-width: 900px; margin: 0 auto; }
+        .nav-back a { color: var(--accent-green); text-decoration: none; font-family: monospace; }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .main-content {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .sidebar {
+            background: rgba(16, 185, 129, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--accent-green);
+            height: fit-content;
+        }
+
+        h1, h2 { color: white; margin-top: 0; }
+        .system-status {
+            font-family: monospace;
+            color: var(--accent-green);
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .data-point {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .label {
+            display: block;
+            color: var(--accent-green);
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-back">
+        <a href="research.html">&larr; BACK_TO_CENTRAL_HUB</a>
+    </div>
+
+    <div class="container">
+        <main class="main-content">
+            <span class="system-status">[ SYSTEM ANALYSIS: ACTIVE ]</span>
+            <h1>Multi-Agent Systems in Smart Manufacturing</h1>
+            
+            <p>This project investigates the decentralized coordination of autonomous agents within a manufacturing environment. By utilizing Multi-Agent Systems (MAS), we can optimize production lines in real-time without central point-of-failure bottlenecks.</p>
+
+            <h2>Core Objectives</h2>
+            <ul>
+                <li>Scalable communication protocols between robotic nodes.</li>
+                <li>Dynamic resource allocation based on real-time demand.</li>
+                <li>Self-healing supply chain logistics.</li>
+            </ul>
+
+            <p>Focus Area: The integration of Large Language Models to orchestrate high-level task planning for low-level mechanical agents.</p>
+        </main>
+
+        <aside class="sidebar">
+            <h2>System Metadata</h2>
+            <div class="data-point">
+                <span class="label">Project Scope</span>
+                Capston Project / Smart Manufacturing
+            </div>
+            <div class="data-point">
+                <span class="label">Key Tech</span>
+                Python, ROS2, Decentralized Logic
+            </div>
+            <div class="data-point">
+                <span class="label">Collaborators</span>
+                Honorine Ndom Ndzah (Mentee)
+            </div>
+        </aside>
+    </div>
+
+</body>
+</html>
