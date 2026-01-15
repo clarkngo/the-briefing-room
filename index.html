@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | Portfolio</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --text: #334155;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: white;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .research-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .research-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .research-card h2 {
+            margin-top: 0;
+            color: var(--dark);
+        }
+
+        .tag {
+            display: inline-block;
+            background: #dbeafe;
+            color: var(--primary);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .link-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .link-button:hover {
+            background-color: #1d4ed8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Research & Publications</h1>
+        <p>Exploring the intersection of technology, strategy, and education.</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="research-card">
+            <span class="tag">Featured Briefing</span>
+            <h2>Blue Tech Strategic Briefing</h2>
+            <p>An in-depth analysis of emerging "Blue Ocean" technologies and their impact on modern industry frameworks.</p>
+            <a href="blue-tech-briefing.html" class="link-button">View Briefing &rarr;</a>
+        </div>
+
+        <div class="research-card">
+            <span class="tag">Manuscript</span>
+            <h2>Current Research Project</h2>
+            <p>Abstract for your current research goes here. Describe the methodology, the problem statement, and the expected outcomes of your study.</p>
+        </div>
+
+        <div class="research-card">
+            <span class="tag">Case Study</span>
+            <h2>Supply Chain Optimization</h2>
+            <p>A look into data-driven decision making within startup ecosystems and resource allocation.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 | Research Portfolio</p>
+        <p><a href="index.html" style="color: var(--primary);">Back to Dashboard</a></p>
+    </footer>
+
+</body>
+</html>
